@@ -1,0 +1,53 @@
+
+PUT /api/usuario/deactivate 200 630.576 ms - 3
+POST /api/usuario/login 200 717.097 ms - 514
+POST /api/usuario/login 401 436.180 ms - 33
+ PASS  test/login.test.js (5.818 s)
+  ● Console    
+
+    console.log
+      prueba@gmail.com
+
+      at login (controllers/UsuarioController.js:100:21)
+
+    console.log
+      Executing (default): SELECT `id`, `rol`, `nombre`, `password`, `email`, `tipo_documento`, `num_documento`, `direccion`, `telefono`, `estado`, `createdAt`, `updatedAt` FROM `Usuarios` AS `Usuario` WHERE `Usuario`.`email` = 'prueba@gmail.com' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1171:15)
+
+    console.log
+      Administrador
+
+      at login (controllers/UsuarioController.js:105:29)
+
+    console.log
+      Administrador
+
+      at Object.encode (services/token.js:26:17)
+
+    console.log
+      prueba@gmail.com
+
+      at login (controllers/UsuarioController.js:100:21)
+
+    console.log
+      Executing (default): SELECT `id`, `rol`, `nombre`, `password`, `email`, `tipo_documento`, `num_documento`, `direccion`, `telefono`, `estado`, `createdAt`, `updatedAt` FROM `Usuarios` AS `Usuario` WHERE `Usuario`.`email` = 'prueba@gmail.com' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1171:15)
+
+    console.log
+      prueb@gmail.com
+
+      at login (controllers/UsuarioController.js:100:21)
+
+    console.log
+      Executing (default): SELECT `id`, `rol`, `nombre`, `password`, `email`, `tipo_documento`, `num_documento`, `direccion`, `telefono`, `estado`, `createdAt`, `updatedAt` FROM `Usuarios` AS `Usuario` WHERE `Usuario`.`email` = 'prueb@gmail.com' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1171:15)
+
+
+Test Suites: 2 passed, 2 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        29.902 s, estimated 31 s
+Ran all test suites.
